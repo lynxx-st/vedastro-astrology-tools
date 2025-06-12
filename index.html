@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JyotishAI - Onboarding</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-gray-900 text-white font-['Roboto'] min-h-screen flex flex-col justify-center items-center p-4">
+  <div class="max-w-md w-full bg-gray-800 rounded-lg shadow-lg p-6">
+    <h1 class="text-3xl font-bold mb-6 text-center">JyotishAI</h1>
+    <div class="mb-6 text-center">
+      <label for="language" class="block mb-2 font-semibold">Select Language / भाषा चयन गर्नुहोस्</label>
+      <select id="language" class="w-full p-2 rounded bg-gray-700 text-white" aria-label="Language selection">
+        <option value="en" selected>English</option>
+        <option value="ne">नेपाली</option>
+      </select>
+    </div>
+    <form id="onboardingForm" class="space-y-4" autocomplete="off" novalidate>
+      <div>
+        <label for="fullName" class="block mb-1 font-semibold" data-en="Full Name" data-ne="पूरा नाम">Full Name</label>
+        <input type="text" id="fullName" name="fullName" required class="w-full p-2 rounded bg-gray-700 text-white" />
+      </div>
+      <div>
+        <label for="dob" class="block mb-1 font-semibold" data-en="Date of Birth" data-ne="जन्म मिति">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required class="w-full p-2 rounded bg-gray-700 text-white" />
+      </div>
+      <div>
+        <label for="tob" class="block mb-1 font-semibold" data-en="Time of Birth" data-ne="जन्म समय">Time of Birth</label>
+        <input type="time" id="tob" name="tob" required class="w-full p-2 rounded bg-gray-700 text-white" />
+      </div>
+      <div>
+        <label for="pob" class="block mb-1 font-semibold" data-en="Place of Birth" data-ne="जन्म स्थान">Place of Birth</label>
+        <input type="text" id="pob" name="pob" required class="w-full p-2 rounded bg-gray-700 text-white" placeholder="Type or select location" />
+      </div>
+      <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 transition rounded py-2 font-semibold mt-4">Continue</button>
+    </form>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
